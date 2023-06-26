@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Dynamic Calendar JavaScript | CodingNepal</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Font Link for Icons -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  
+  <script src="assets/js/calendarTest.js" defer></script>
+  <script src="assets/js/addPopUp.js" defer></script>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/calendarTest.css" />
+</head>
+<body>
+	<div class="col-sm-5 ma25 wrapper calendar">
+		<header>
+			<p class="current-date"></p>
+			<div class="icons">
+				<span id="prev" class="material-symbols-rounded">chevron_left</span>
+				<span id="next" class="material-symbols-rounded">chevron_right</span>
+			</div>
+		</header>
+		<div class="calendar">
+			<ul class="weeks">
+				<li>Sun</li>
+				<li>Mon</li>
+				<li>Tue</li>
+				<li>Wed</li>
+				<li>Thu</li>
+				<li>Fri</li>
+				<li>Sat</li>
+			</ul>
+			<ul class="days"></ul>
+		</div>
+	</div>
+  <div class="col-sm-5 ma25 pickedDate">
+    <h3 id="datePicked">25</h3>
+    <button class="addTimeRangeBtn" onclick="openForm2()"> Add time range </button>
+    <div class="dayInfo" id="dayInfo">
+
+
+  </div>
+</div>
+
+  <div class ="col-sm-2 ma25 featureProvider ">
+  </div>
+
+  
+
+</body>
+</html>

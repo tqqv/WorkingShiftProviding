@@ -1,0 +1,349 @@
+.wrapper.calendar {
+  height: 620px;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.calendar {
+  padding-top: 16px;
+}
+
+.calendar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar header .current-date {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.calendar header .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar header .icons span {
+  font-family: 'Material Symbols Rounded', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.calendar ul.weeks {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar ul.weeks li {
+  text-align: center;
+  width: calc(100% / 7);
+  color: #333;
+}
+
+.calendar ul.days {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+}
+
+.calendar ul.days li {
+  text-align: center;
+  width: calc(100% / 7);
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar ul.days li.today {
+  background-color: #2196f3;
+  color: #fff;
+  font-weight: bold;
+}
+
+.calendar ul.days li.other-month {
+  color: #888;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.col-sm-5.pickedDate {
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  height: 620px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.pickedDate h3 {
+  position: absolute;
+  font-size: 52px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.dayInfo {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dayInfo .container {
+  margin-top: 60px;
+}
+
+.dayInfo .container h5 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.perTimeRange {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+.perTimeRange .article {
+  height: 100px;
+  display: flex;
+  align-items: stretch;
+}
+
+.perTimeRange .hF {
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.perTimeRange .timeRange {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  background-color: #00bcd4;
+  color: #fff;
+  text-align: center;
+}
+
+.perTimeRange .timeRangeInfo {
+  padding: 20px;
+}
+
+.perTimeRange .perVac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.perTimeRange .perVac .vacId {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.perTimeRange .perVac .vacName {
+  text-align: left;
+}
+
+.perTimeRange .perVac .edit {
+  font-weight: bold;
+  font-size: 14px;
+  text-align:center;
+  text-decoration: underline; color: #2196f3; cursor: pointer; }
+
+.perTimeRange .perVac .numVac { font-weight: bold; font-size: 20px; text-align: right; }
+
+.perTimeRange .perVac .numApp { text-align: right; }
+
+.perTimeRange .perVac .numRem { text-align: right; }
+
+.perTimeRange .perVac .numVac span, .perTimeRange .perVac .numApp span, .perTimeRange .perVac .numRem span { font-size: 14px; color: #333; font-weight: normal; }
+
+@media only screen and (max-width: 767.98px) { .col-sm-5.pickedDate { height: auto; }
+
+.dayInfo .container { margin-top: 20px; }
+
+.perTimeRange { flex-wrap: wrap; margin-bottom: 20px; }
+
+.perTimeRange .article { width: 100%; }
+
+.perRange .hF { padding: 15px; }
+
+.perTimeRange .timeRange { width: 100%; margin-right: 0; margin-bottom: 15px; }
+
+.perTimeRange .timeRangeInfo { padding: 15px; }
+
+.perTimeRange .perVac { flex-wrap: wrap; justify-content: space-between; align-items: center; }
+
+.perTimeRange .perVac .vacId, .perTimeRange .perVac .vacName { width: 100%; text-align: left; }
+
+.perTimeRange .perVac .edit { margin-top: 10px; width: 100%; text-align: center; }
+
+.perTimeRange .perVac .numVac, .perTimeRange .perVac .numApp, .perTimeRange .perVac .numRem { width: 100%; text-align: right; } }
+
+/* calender */
+.wrapper{
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 16px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: white;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+/* calender */
+
+/* dayinfo-article */
+.col-sm-1.yellow.hF {
+  padding: inherit;
+  align-items: revert;
+  display: flex;
+  width: fit-content;
+  }
+  .btn-addVaccine:hover {
+    /* background-color: #999; */
+    /* border-radius: 50%; */
+    
+}
+
+.vacId { 
+    height: 20px;
+     width: 30px;
+     margin-right: 8px;
+ }
+
+ .timeRangeInfo {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* hide  addForm */
+.addVaccineForm { 
+  display: none;
+  margin-left: -24px;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  background-color: #888;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 160px;
+}
+.addVaccineForm label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.addTimeRangeForm { 
+  display: none;
+  margin-left: -24px;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  background-color: #888;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 160px;
+}
+.addTimeRangeForm label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* dayinfo-article */
+
+
+/* custom */
+.ma25{
+  margin: 25px;
+}
+
+.addTimeRangeBtn {
+  position: absolute;
+  right: 20px;
+  top: 24px;
+
+}
+/* custom */
+
+.pns {
+background-color: #fba22d !important; 
+}
+
+.ps{
+  background-color: cornflowerblue !important;
+
+}
+
+.np{
+  background-color: coral !important;
+}
